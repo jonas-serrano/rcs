@@ -1,0 +1,19 @@
+bind-key -n M-h select-pane -L
+bind-key -n M-j select-pane -D
+bind-key -n M-k select-pane -U
+bind-key -n M-l select-pane -R
+
+bind-key -n M-H switch-client -p
+bind-key -n M-J switch-client -p
+bind-key -n M-K switch-client -n
+bind-key -n M-L switch-client -n
+
+bind-key c new-session
+
+set-option -g status-left-length 52
+
+# Force 256 color term
+set -g default-terminal "screen-256color"
+
+# Shotcut for split
+bind-key L split-window -h \; split-window -h \; select-layout even-horizontal \; split-window -v \; select-pane -R \; split-window -v \; select-pane -U \;
